@@ -1,5 +1,6 @@
 namespace: default
 working_dir: .
-output:
-  - file_path: ./pipelineruns/machine/results
-  - format: CSV
+strict: true
+sast:
+  include:
+    - ./
