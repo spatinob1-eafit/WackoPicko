@@ -9,3 +9,10 @@ jobs:
            name: machineStandalone
            with:
             args: skims scan .
+         - name: Check output
+           run: |
+             OUTPUT=$(docker logs machineStandalone)
+             if [[ "$OUTPUT" == *"CWE"* ]]; then
+               echo "Condition met, stopping pipeline"
+               exit 1
+             fi
