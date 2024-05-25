@@ -3,4 +3,4 @@ working_dir: .
 strict: true
 sast:
   include:
-    - /relative/path/to/file
+    - .
