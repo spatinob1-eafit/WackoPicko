@@ -4,3 +4,5 @@ strict: true
 sast:
   include:
     - .
+output:
+  file_path: ./Fluid-Attacks-Results.csv
